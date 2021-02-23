@@ -1,0 +1,132 @@
+MariaDB [z1861588]> \. Dogs.sql
+Query OK, 0 rows affected (0.148 sec)
+
+Query OK, 0 rows affected (0.119 sec)
+
+Query OK, 0 rows affected (0.200 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.041 sec)
+
+Query OK, 1 row affected (0.050 sec)
+
+Query OK, 1 row affected (0.050 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
++--------+----------+------+-----+---------+-------+
+| Field  | Type     | Null | Key | Default | Extra |
++--------+----------+------+-----+---------+-------+
+| DogID  | int(4)   | NO   | PRI | NULL    |       |
+| Breed  | char(30) | NO   |     | NULL    |       |
+| Name   | char(20) | NO   |     | NULL    |       |
+| Weight | int(3)   | NO   |     | NULL    |       |
++--------+----------+------+-----+---------+-------+
+4 rows in set (0.001 sec)
+
++-------+--------------------+--------+--------+
+| DogID | Breed              | Name   | Weight |
++-------+--------------------+--------+--------+
+|   986 | French Bulldog     | Milo   |     26 |
+|  1129 | Great Dane         | Rocky  |    150 |
+|  1564 | Labrador Retriever | Sammy  |     54 |
+|  1602 | German Shepherd    | Max    |     90 |
+|  1792 | Husky              | Daisy  |     52 |
+|  1893 | Golden Retriever   | Goldie |     64 |
++-------+--------------------+--------+--------+
+6 rows in set (0.001 sec)
+
+Query OK, 0 rows affected (0.232 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.064 sec)
+
+Query OK, 1 row affected (0.028 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
++-----------+--------+------+-----+---------+----------------+
+| Field     | Type   | Null | Key | Default | Extra          |
++-----------+--------+------+-----+---------+----------------+
+| VisitID   | int(8) | NO   | PRI | NULL    | auto_increment |
+| DogID     | int(4) | NO   | MUL | NULL    |                |
+| VisitDate | date   | NO   |     | NULL    |                |
+| Duration  | time   | NO   |     | NULL    |                |
++-----------+--------+------+-----+---------+----------------+
+4 rows in set (0.001 sec)
+
++---------+-------+------------+----------+
+| VisitID | DogID | VisitDate  | Duration |
++---------+-------+------------+----------+
+|       1 |  1792 | 2020-09-07 | 01:12:00 |
+|       2 |  1792 | 2020-09-12 | 00:38:00 |
+|       3 |   986 | 2020-10-01 | 01:30:00 |
+|       4 |  1602 | 2020-10-05 | 00:58:00 |
+|       5 |  1792 | 2020-11-02 | 02:25:00 |
+|       6 |  1564 | 2020-11-05 | 01:21:00 |
+|       7 |  1893 | 2020-11-25 | 00:34:00 |
+|       8 |  1129 | 2020-12-08 | 03:25:00 |
+|       9 |  1792 | 2020-12-27 | 00:14:00 |
++---------+-------+------------+----------+
+9 rows in set (0.001 sec)
+
+Query OK, 0 rows affected (0.343 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.030 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.025 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.025 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.025 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.025 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.025 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.042 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.025 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.025 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
++---------+-------+------------+----------+---------+
+| VisitID | DogID | VisitDate  | Duration | Bill    |
++---------+-------+------------+----------+---------+
+|       1 |  1792 | 2020-09-07 | 01:12:00 |  569.15 |
+|       2 |  1792 | 2020-09-12 | 00:38:00 |   99.99 |
+|       3 |   986 | 2020-10-01 | 01:30:00 |  152.17 |
+|       4 |  1602 | 2020-10-05 | 00:58:00 | 1569.35 |
+|       5 |  1792 | 2020-11-02 | 02:25:00 |   79.55 |
+|       6 |  1564 | 2020-11-05 | 01:21:00 |  869.01 |
+|       7 |  1893 | 2020-11-25 | 00:34:00 |     777 |
+|       8 |  1129 | 2020-12-08 | 03:25:00 |  868.05 |
+|       9 |  1792 | 2020-12-27 | 00:14:00 |    0.99 |
++---------+-------+------------+----------+---------+
+9 rows in set (0.001 sec)
+
+MariaDB [z1861588]> \t
