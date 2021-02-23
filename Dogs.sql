@@ -1,7 +1,7 @@
 DROP TABLE Dogs;
 DROP TABLE Visit;
 CREATE TABLE Dogs(
-ID int(4) PRIMARY KEY,
+DogID int(4) PRIMARY KEY,
 Breed char(30) NOT NULL,
 Name char(20) NOT NULL,
 Weight int(3) NOT NULL
@@ -52,7 +52,7 @@ DogID int(4) NOT NULL,
 VisitDate DATE NOT NULL,
 Duration TIME NOT NULL
 
-FOREIGN KEY (DogID) REFERENCES Dogs(ID)
+FOREIGN KEY (DogID) REFERENCES Dogs(DogID)
 );
 
 INSERT INTO Visit
