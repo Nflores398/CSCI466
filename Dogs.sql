@@ -120,5 +120,42 @@ INSERT INTO Visit
 );
 DESCRIBE Visit;
 SELECT * FROM Visit;
-ALTER TABLE Visit ADD Bill float(6);
+ALTER TABLE Visit ADD Bill float(8);
+
+UPDATE Visit
+SET Bill = '569.15'
+WHERE VisitID = 1;
+
+UPDATE Visit
+SET Bill = '99.99'
+WHERE VisitID = 2;
+
+UPDATE Visit
+SET Bill = '152.17'
+WHERE VisitID = 3;
+
+UPDATE Visit
+SET Bill = '1569.35'
+WHERE VisitID = 4;
+
+UPDATE Visit
+SET Bill = '79.55'
+WHERE VisitID = 5;
+
+UPDATE Visit
+SET Bill = '869.01'
+WHERE VisitID = 6;
+
+UPDATE Visit
+SET Bill = '777.00'
+WHERE VisitID = 7;
+
+UPDATE Visit
+SET Bill = '868.05'
+WHERE VisitID = 8;
+
+UPDATE Visit
+SET Bill = '0.99'
+WHERE VisitID = 9;
+
 SELECT * FROM Visit;
