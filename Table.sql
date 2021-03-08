@@ -2,20 +2,20 @@ DROP TABLE S;
 DROP TABLE P;
 DROP TABLE SP;
 CREATE TABLE S(
-S char(2) PRIMARY KEY,
+S char(5) PRIMARY KEY,
 SNAME char(20) NOT NULL,
 STATUS int(5) NOT NULL,
 CITY char(20) NOT NULL
 );
 CREATE TABLE P(
-P char(2) PRIMARY KEY,
+P char(5) PRIMARY KEY,
 PNAME char(20) NOT NULL,
 COLOR char(10) NOT NULL,
 WEIGHT int(5) NOT NULL
 );
 CREATE TABLE SP(
-S char(2) NOT NULL,
-P char(2) NOT NULL,
+S char(5) NOT NULL,
+P char(5) NOT NULL,
 QTY int(5) NOT NULL,
 FOREIGN KEY (S) REFERENCES S(S),
 FOREIGN KEY (P) REFERENCES P(P)
@@ -47,6 +47,13 @@ INSERT INTO S
 'Clark',
  '20',
  'Paris'
+);
+INSERT INTO S
+VALUE(
+'S5',
+'Adam',
+'30',
+'Athens'
 );
 INSERT INTO P
  VALUE(
@@ -94,71 +101,71 @@ INSERT INTO SP
  VALUE(
 'S1',
 'P1',
- '300',
+ '300'
 );
 INSERT INTO SP
  VALUE(
 'S1',
 'P2',
- '300',
+ '300'
 );
 INSERT INTO SP
  VALUE(
 'S1',
 'P3',
- '400',
+ '400'
 );
 INSERT INTO SP
  VALUE(
 'S1',
 'P4',
-'200',
+'200'
 );
 INSERT INTO SP
  VALUE(
 'S1',
 'P5',
- '100',
+ '100'
 );
 INSERT INTO SP
  VALUE(
 'S1',
 'P6',
- '100',
+ '100'
 );
 INSERT INTO SP
  VALUE(
 'S2',
 'P1',
- '300',
+ '300'
 );
 INSERT INTO SP
  VALUE(
 'S2',
 'P2',
- '400',
+ '400'
 );
 INSERT INTO SP
  VALUE(
 'S3',
 'P1',
- '200',
+ '200'
 );
 INSERT INTO SP
  VALUE(
 'S4',
 'P2',
- '200',
+ '200'
 );
 INSERT INTO SP
  VALUE(
 'S4',
 'P4',
- '300',
+ '300'
 );
 INSERT INTO SP
  VALUE(
 'S4',
 'P5',
- '400',
+ '400'
 );
